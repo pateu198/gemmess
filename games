@@ -9,7 +9,7 @@ local GUI = Mercury:Create{
     Name = "Kaoru Hub",
     Size = UDim2.fromOffset(600, 400),
     Theme = Mercury.Themes.Dark,
-    Link = "https://raw.githubusercontent.com/Uvxtq/lua/main/games/Anime%20Battle%20Tycoon.lua"
+    Link = "https://raw.githubusercontent.com/pateu198/gemmess/main/games"
 }
 
 -- // TABS
