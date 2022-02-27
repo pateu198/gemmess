@@ -111,18 +111,3 @@ GUI:Credit{
 	none = nil,
 	none = "none"
 }
-
--- // Q tp
-Teleport:button{
-	Name = "Teleport to Hidden Leaf",
-	StartingState = false,
-	Description = nil,
-	Callback = function()
-        function teleportTO(placeCFrame)
-            local plyr = game.Players.LocalPlayer;
-            if plyr.Character then
-                plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
-            end
-        end
-    teleportTO(game:GetService("Workspace").Worlds["Leaf Village"].Map.Model.fence.CFrame)
-end
