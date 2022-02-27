@@ -2,14 +2,14 @@
 repeat wait() until game:IsLoaded()
 
 -- // MERCURY LOADSTRING
-local Mercury = loadstring(game:HttpGet("https://raw.githubusercontent.com/pateu198/hubpateuw/main/lua"))()
+local Mercury = loadstring(game:HttpGet("https://raw.githubusercontent.com/Uvxtq/lua/main/Updated%20UI%20Library"))()
 
 -- // GUI
 local GUI = Mercury:Create{
     Name = "Kaoru Hub",
     Size = UDim2.fromOffset(600, 400),
     Theme = Mercury.Themes.Dark,
-    Link = "https://raw.githubusercontent.com/pateu198/gemmess/main/games"
+    Link = "https://raw.githubusercontent.com/Uvxtq/lua/main/games/Anime%20Battle%20Tycoon.lua"
 }
 
 -- // TABS
@@ -33,6 +33,11 @@ local Teleport = GUI:Tab{
 	Icon = "rbxassetid://8945517811"
 }
 
+local Extra = GUI:Tab{
+	Name = "Extra",
+	Icon = "rbxassetid://8950218710"
+}
+
 -- // TABLE
 Buttons = {}
 for i = 1, 5 do
@@ -46,22 +51,7 @@ for i = 1, 5 do
 end
 
 for i,v in pairs(Buttons) do
-print(v)
-end
-
--- // AUTO EQUIP BEST PETS
-Main:Toggle{
-	Name = "Auto Equip Best",
-	StartingState = false,
-	Description = "Auto Equips Best Pets.",
-	Callback = function(c)
-    -- // WHATS BEING CALLED BACK
-    getgenv().sell = c
-    while true and wait(10) do -- // REPEATES AND WAITS 10 SECONDS
-        if not getgenv().sell then return end -- // STOPS THE REPEATE IF DISABLED
-        local args = {[1] = "EquipBest"} -- // LOCAL ARGS
-        game:GetService("ReplicatedStorage").Modules.ServiceLoader.NetworkService.Events.Objects.UpdatePets:FireServer(unpack(args)) -- // THE SERVERS CHECKING THE LOCAL ARGS THEN FIRING THE SERVER
-    end
+    print(v)
 end
 }
 
@@ -106,8 +96,20 @@ GUI:Notification{
 
 -- // CREDITS 
 GUI:Credit{
-	Name = "none",
-	Description = "none",
-	none = nil,
-	none = "none"
+	Name = "pateut",
+	Description = "no one helped with the script!",
+	V3rm = nil,
+	Discord = "〥✦𝓹𝓪𝓽𝓮𝓾 ャガᵛᵈ#0001"
 }
+
+-- // COPYS DISCORD INVITE
+Extra:Button{
+	Name = "Copy my miau",
+	Description = nil,
+	Callback = function()
+        setclipboard('miau')
+    end
+}
+
+-- // REMOVE NOTIFICATIONS
+game:GetService("Players").LocalPlayer.PlayerGui.Display.Notifications:Destroy() -- // DESTROYS THE GEY ASS NOTIFICATIONS 
