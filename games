@@ -6,7 +6,7 @@ local Mercury = loadstring(game:HttpGet("https://raw.githubusercontent.com/pateu
 
 -- // GUI
 local GUI = Mercury:Create{
-    Name = "pateu Hub",
+    Name = "pateut hub",
     Size = UDim2.fromOffset(600, 400),
     Theme = Mercury.Themes.Dark,
     Link = "https://raw.githubusercontent.com/pateu198/gemmess/main/games"
@@ -111,4 +111,7 @@ GUI:Credit{
 	Description = "none",
 	none = nil,
 	none = "none"
+}
+       game.Players.LocalPlayer.Character.Humanoid.JumpPower = j -- // CHANGES YOUR LOCAL JUMPPOWER
+    end
 }
