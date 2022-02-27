@@ -48,6 +48,7 @@ end
 for i,v in pairs(Buttons) do
 print(v)
 end
+}
 
 -- // AUTO EQUIP BEST PETS
 Main:Toggle{
