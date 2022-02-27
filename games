@@ -6,7 +6,7 @@ local Mercury = loadstring(game:HttpGet("https://raw.githubusercontent.com/pateu
 
 -- // GUI
 local GUI = Mercury:Create{
-    Name = "Kaoru Hub",
+    Name = "pateu Hub",
     Size = UDim2.fromOffset(600, 400),
     Theme = Mercury.Themes.Dark,
     Link = "https://raw.githubusercontent.com/pateu198/gemmess/main/games"
@@ -111,20 +111,4 @@ GUI:Credit{
 	Description = "none",
 	none = nil,
 	none = "none"
-}
-
--- // Q tp
-Teleport:button{
-	Name = "Teleport to Hidden Leaf",
-	StartingState = false,
-	Description = nil,
-	Callback = function()
-        function teleportTO(placeCFrame)
-            local plyr = game.Players.LocalPlayer;
-            if plyr.Character then
-                plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
-            end
-        end
-    teleportTO(game:GetService("Workspace").Worlds["Leaf Village"].Map.Model.fence.CFrame)
-end
 }
